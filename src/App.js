@@ -1,5 +1,5 @@
 import './App.css';
-import MainPageComponent from "./main/index";
+import MainPage from "./main/index";
 import {Switch, Route} from "react-router-dom";
 import UploadPage from "./upload";
 import ProductPage from "./product";
@@ -9,13 +9,13 @@ function App() {
         <div className="App">
             <Switch>
                 <Route exact={true} path={"/"}>
-                    <MainPageComponent/>
+                    <MainPage/>
+                </Route>
+                <Route exact={true} path={"/products/:id"}>
+                    <ProductPage/>
                 </Route>
                 <Route exact={true} path={"/upload"}>
                     <UploadPage/>
-                </Route>
-                <Route exact={true} path={"/product"}>
-                    <ProductPage/>
                 </Route>
             </Switch>
         </div>
